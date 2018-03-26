@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "宋体";
+	background: url(../img/background1.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+.clearfix:after,.clearfix:before{  /*清除浮动*/
+   content: "";
+   display: table;
+}
+.clearfix:after{
+   clear: both;
+}
+.clearfix{
+  *zoom:1; /*兼容IE和IE7*/
+}
+.poa{
+	position: absolute;
+}
+.por{
+	position: relative;
+}
+.pof{
+	position: fixed;
+}	
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.header{
+	width: 100%;
+	height: 8.25rem;
+	padding-top: 2.75rem;
+}
+.cdk,.psn{
+	height: 1.25rem;
+	width: 100%;
+/*	margin-bottom: 1.5rem;*/
+	padding-left: 1.6rem;
+	box-sizing: border-box;		
+}
+.header .title{
+	width: 3.25rem;
+	height: 1rem;
+	background: url(../img/cdk.png) no-repeat center center;
+	background-size: cover;
+	margin-top: 0.2rem;
+}
+.header .n2{
+	background: url(../img/psn.png) no-repeat center center;
+	background-size: cover;
+}
+.header .left{
+	width: 8rem;
+	height: 100%;
+	border: 0.025rem solid #707070;
+	margin-left: 0.8rem;
+	font-size: 0.6rem;
+	padding-left: 0.25rem;
+	box-sizing: border-box;
+}
+.ann{
+	width: 100%;
+	height: 2rem;
+	text-align: center;
+	
+}
+.ann .button{
+	width: 6rem;
+	height: 1.6rem;
+	margin-left: 1.1rem;
+	background: #ccc url(../img/bu-cn.png) no-repeat center center;
+	background-size: 65% 60%;
+	/*background-size:cover ;*/
+	border-radius: 0.25rem ;
+	box-shadow: 0px 0.07rem 0.37rem #000;
+	outline: none;
+	border: none;
+}
+.title-no{
+	width: 100%;
+	height: 4rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.5rem;
+	padding-left: 1.1rem;
+	color: #fff;
+	box-sizing: border-box;
+	display: none;
+}
+.title-no>p{
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+}
+#PN-text,#cdkey-text{
+	width: 100%;
+	height: 1.5rem;
+	color: red;
+	font-size: 0.6rem;
+	text-align: center;
+	line-height: 1.5rem;
+}
