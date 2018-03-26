@@ -70,7 +70,7 @@ function postData(url, data) {
 		dataType: "json",//预期服务器返回的数据类型
 		url: "http://weixin-test-ziweigamepoch.c9users.io/api/codes/check",//url
 		data: {
-		"codeType":"2",
+		"codeType":"0",
 		"codeString":$('#cdkey').val()
 		},
 		success: function (result) {			
@@ -86,14 +86,15 @@ function postData(url, data) {
 //					console.log(result);
 				        $(".form").css('display','none');
 				        $('.title-no').css('display','block');
-				        for(var i in result) { //&&result[i].isUsed==false
-				            if(result[i].codeType==1){ 
+				        for(var i in result) { //
+				            if(result[i].codeType==1&&result[i].isUsed==false){ 
 //				            	console.log(result[i])
 				            		 codeIdd.push( result[i]);				               
 				            }
 				        }
 				        $('.title-no').html("<p>"+codeIdd[0].codeString+"</p>");
 						$('.bth').css({'background-color':'#ccc'});
+						$(".bth").attr('disabled',true); 
 //				        console.log(codeId[0]);
 						var codeIdo = "https://weixin-test-ziweigamepoch.c9users.io/api/codes/"+codeIdd[0]._id+"?_method=PATCH";
 						console.log(codeIdo)
