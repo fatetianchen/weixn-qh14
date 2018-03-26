@@ -15,7 +15,7 @@
          	var user = $("#PN").val();
          	var Chinese = /^[\w\?%&=\-_]+$/;
          	if(user.length == ""){
-         		$("#PN-text").text("PSN不正确").css('color','#fe4a4a');
+         		$("#PN-text").text("PSN 不正确").css('color','#fe4a4a');
          		return false;
          	}else if(!Chinese.test(user)){
          		$("#PN-text").html("含有特殊字符").css('color','#fe4a4a');
