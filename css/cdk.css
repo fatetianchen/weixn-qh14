@@ -165,8 +165,7 @@ ul,li{
 	padding:0.05rem 1rem;
 	background:#8fc31f;
 	border-radius:0.05rem;
-	float:right;
-	margin-right:0.37rem;
 	cursor:pointer;
 	font-size: 0.6rem;
+	margin: 0 auto;
 }
