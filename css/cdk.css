@@ -4,7 +4,7 @@
 }
 body{
 	font-family: "宋体";
-	background: url(../img/background1.jpg) no-repeat center center;
+	background: url(../images/background1.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	z-index: -1;
@@ -55,12 +55,12 @@ ul,li{
 .header .title{
 	width: 3.25rem;
 	height: 1rem;
-	background: url(../img/cdk.png) no-repeat center center;
+	background: url(../images/cdk.png) no-repeat center center;
 	background-size: cover;
 	margin-top: 0.2rem;
 }
 .header .n2{
-	background: url(../img/psn.png) no-repeat center center;
+	background: url(../images/psn.png) no-repeat center center;
 	background-size: cover;
 }
 .header .left{
@@ -82,7 +82,7 @@ ul,li{
 	width: 6rem;
 	height: 1.6rem;
 	margin-left: 1.1rem;
-	background: #ccc url(../img/bu-cn.png) no-repeat center center;
+	background: #ccc url(../images/bu-cn.png) no-repeat center center;
 	background-size: 65% 60%;
 	/*background-size:cover ;*/
 	border-radius: 0.25rem ;
@@ -114,4 +114,59 @@ ul,li{
 	font-size: 0.6rem;
 	text-align: center;
 	line-height: 1.5rem;
+}
+.tan{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+#msg{
+	width:8rem;
+	height: 4.2rem;
+	position: fixed;
+	z-index:999;
+	top: 50%;
+	margin-top:-3.1rem;
+	left:50%;
+	margin-left:-4rem;
+	background:#fff;
+	box-shadow:0rem 3rem 15rem #000;
+	color:#666;
+	border:0.025rem solid #f8f8f8;
+	text-align: center;
+	line-height: 1rem;
+	display:inline-block;
+	padding-bottom:0.5rem;
+	border-radius:0.05rem;
+	font-family: "微软雅黑";
+}
+#msg_top{
+	background:#f8f8f8;
+	padding:0.2rem 0.37rem 0.2rem 0.5rem;
+	text-align: center;
+	font-size: 0.6rem;
+}
+#msg_top span{
+	font-size:0.6rem;
+	float:right;
+	cursor:pointer;
+}
+#msg_cont{
+	padding:0.37rem 0.5rem 0.5rem;
+	text-align: center;
+	font-size: 0.6rem;        
+}
+#msg_clear{
+	display:inline-block;
+	color:#fff;
+	padding:0.05rem 1rem;
+	background:#8fc31f;
+	border-radius:0.05rem;
+	float:right;
+	margin-right:0.37rem;
+	cursor:pointer;
+	font-size: 0.6rem;
 }
