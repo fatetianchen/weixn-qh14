@@ -57,14 +57,70 @@ $('#PN').bind('input propertychange', function() {
 $('#cdkey').bind('input propertychange', function() {
 	formbth();
 });
-function formValidate(){
-		postData();
-	}
+/*提交数据*/
+//$(document).click(function(){
+//	var a = parseInt(Math.random()*99999+1);
+//	var b = parseInt(Math.random()*999+1);
+//	console.log(a+b);
+//	$.ajax({
+//	url: 'https://weixin-test-ziweigamepoch.c9users.io/api/accounts/',
+//	method:'POST',
+//	dataType: "json",
+//	data:{"unionid":'user'+a+b},//false true
+//	success: function(data){
+//	console.log(data)
+//	},					
+//	error : function(err) {
+//	console.log(err);
+//	}
+//	});
+//})
+function ran(len) {
+　　len = len || 32;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+var Zn = ran(1);
+var Zn1 = ran(2);
+var Zn2 = ran(1);
+var a = parseInt(Math.random()*99+1);
+var c = parseInt(Math.random()*99+1);
+var user ="user"+a+Zn+Zn2+c+Zn1;
+//console.log(user);
 $('.button').on('click', function() {
-	formValidate();
+	nameC();
+	postData();
 });
-/*提交数据*/ 
-function postData(url, data) {
+function nameC(){
+	var w = parseInt(Math.random()*99+1);
+	var e = parseInt(Math.random()*99+1);
+	$.ajax({
+		url: 'https://weixin-test-ziweigamepoch.c9users.io/api/accounts/',
+		method:'GET',
+		dataType: "json",
+		data:{},//false true
+		success: function(data){
+//			console.log(data)
+			for(var i in data) { 
+				if(data[i].unionid == user){
+					user = user+w+e;
+//					console.log(user);
+				}
+			}
+			
+		},					
+		error : function(err) {
+			console.log(err);
+		}
+		});
+}
+function postData(url, data) {	
+	var cdkk = $('#cdkey').val();		
 	$.ajax({
 		type: "POST",//方法类型
 		dataType: "json",//预期服务器返回的数据类型
@@ -75,9 +131,9 @@ function postData(url, data) {
 		},
 		success: function (result) {			
 			if(result.isUsed == false){
-				alert('兑换成功');
+//				alert('兑换成功');
 				var codeIdd = [];
-				$.ajax({ //获取四个conde
+				$.ajax({ //获取值为1的conde
 				    type: "GET",
 				    dataType: "json",
 				    url: "http://weixin-test-ziweigamepoch.c9users.io/api/codes",//?isused=false
@@ -93,20 +149,36 @@ function postData(url, data) {
 				            }
 				        }
 				        $('.title-no').html("<p>"+codeIdd[0].codeString+"</p>");
-						$('.bth').css({'background-color':'#ccc'});
-						$(".bth").attr('disabled',true); 
+						$('.bth').css('display','none');
+						$('.ann-title').css('display','block'); 
 //				        console.log(codeId[0]);
 						var codeIdo = "https://weixin-test-ziweigamepoch.c9users.io/api/codes/"+codeIdd[0]._id+"?_method=PATCH";
-						console.log(codeIdo)
+//						console.log(codeIdo)
 						$.ajax({
 							url: codeIdo,
 							method:'POST',
 							data:{"isUsed":true},//false true
 							success: function(data){
-								console.log(data)
+//								console.log(data)
 							},					
 							error : function(err) {
 								console.log(err);
+							}
+						});
+						$.ajax({
+							url: 'https://weixin-test-ziweigamepoch.c9users.io/api/accounts/',
+							method:'POST',
+							dataType: "json",
+							data:{
+								"unionid":user,
+								"code0":cdkk,
+								"code1":codeIdd[0].codeString,
+							},//false true
+							success: function(data){
+							console.log(data)
+							},					
+							error : function(err) {
+							console.log(err);
 							}
 						});
 				    },

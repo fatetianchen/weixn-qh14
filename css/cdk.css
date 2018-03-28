@@ -90,10 +90,24 @@ ul,li{
 	outline: none;
 	border: none;
 }
+.ann .ann-title{
+	width: 8rem;
+	height: 100%;
+	/*background-color: oldlace;*/
+	left: 50%;
+	top: 0;
+	margin-left: -4rem;
+	padding: 0.3rem 0rem;
+	line-height: 0.7rem;
+	color: yellow;
+	display: none;
+	font-size: 0.6rem;
+	box-sizing: border-box;
+}
 .title-no{
 	width: 100%;
 	height: 4rem;
-	margin-bottom: 1.5rem;
+	/*margin-bottom: 1.5rem;*/
 	text-align: center;
 	line-height: 4rem;
 	font-size: 1.5rem;
