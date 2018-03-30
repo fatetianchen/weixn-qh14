@@ -185,3 +185,7 @@ ul,li{
 	font-size: 0.6rem;
 	margin: 0 auto;
 }
+#loadingTips{
+	background-size: 13% 45% !important;
+	
+}
