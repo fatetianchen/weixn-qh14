@@ -11,7 +11,7 @@
             //提示边框宽度
             borderStyle: "solid",
             //提示边框样式
-            loadingTips: "客观~ 奴家正在拼命加载哦！...",
+            loadingTips: "正在加载，请稍候！...",
             //提示文本
             TipsColor: "#666",
             //提示颜色

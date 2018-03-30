@@ -74,7 +74,7 @@ ul,li{
 }
 .ann{
 	width: 100%;
-	height: 2rem;
+	min-height: 2.6rem;
 	text-align: center;
 	
 }
@@ -91,35 +91,37 @@ ul,li{
 	border: none;
 }
 .ann .ann-title{
-	width: 9rem;
+	width: 12rem;
 	height: 100%;
-	/*background-color: oldlace;*/
 	left: 50%;
 	top: 0;
-	margin-left: -4rem;
+	margin-left: -6rem;
 	padding: 0.3rem 0rem;
 	line-height: 0.7rem;
 	color: yellow;
 	display: none;
 	font-size: 0.6rem;
 	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.5);
 }
 .title-no{
 	width: 100%;
-	height: 4rem;
+	height: 3rem;
 	/*margin-bottom: 1.5rem;*/
 	text-align: center;
-	line-height: 4rem;
+	line-height: 3rem;
 	font-size: 1.5rem;
 	padding-left: 1.1rem;
 	color: #fff;
 	box-sizing: border-box;
 	display: none;
 }
-.title-no>p{
-	width: 100%;
-	height: 4rem;
-	line-height: 4rem;
+.title-no>span{
+	display: inline-block;
+	height: 2rem;
+	line-height: 2rem;
+	padding: 0rem 0.5rem;
+	
 }
 #PN-text,#cdkey-text{
 	width: 100%;

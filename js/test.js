@@ -7,7 +7,6 @@
          	}else if(!Chinese.test(user)){
          		$("#cdkey-text").html("含有特殊字符").css('color','#fe4a4a');
          	}else{
-         		$("#cdkey-text").html("输入正确").css('color','green');
 				return false;
          	}
         })
@@ -20,7 +19,6 @@
          	}else if(!Chinese.test(user)){
          		$("#PN-text").html("含有特殊字符").css('color','#fe4a4a');
          	}else{
-         		$("#PN-text").html("输入正确").css('color','green');
 				return false;
          	}
         })	
@@ -60,7 +58,7 @@ $('#cdkey').bind('input propertychange', function() {
 /*提交数据*/
 function ran(len) {
 　　len = len || 32;
-　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz1234567890';
 　　var maxPos = $chars.length;
 　　var pwd = '';
 　　for (i = 0; i < len; i++) {
@@ -118,7 +116,7 @@ function postData(url, data) {
 				$.ajax({ //获取值为1的conde
 				    type: "GET",
 				    dataType: "json",
-				    url: "http://weixin-test-ziweigamepoch.c9users.io/api/codes",//?isused=false
+				    url: "http://weixin-test-ziweigamepoch.c9users.io/api/codes",//
 				    data: {},
 				    success: function (result) {
 //					console.log(result);
@@ -130,7 +128,7 @@ function postData(url, data) {
 				            		 codeIdd.push( result[i]);				               
 				            }
 				        }
-				        $('.title-no').html("<p>"+codeIdd[0].codeString+"</p>");
+				        $('.title-no').html("<span>"+codeIdd[0].codeString+"</span>");
 						$('.bth').css('display','none');
 						$('.ann-title').css('display','block'); 
 //				        console.log(codeId[0]);
