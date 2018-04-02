@@ -47,3 +47,39 @@ jQuery(window).load(function() {
 	},800);
 	
 });
+
+jQuery(window).resize(function(){
+				 resizenow();
+			});
+			function resizenow() {
+				var browserwidth = jQuery(window).width();
+				var browserheight = jQuery(window).height();
+				jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
+			};
+			resizenow();
+
+	    function alert(e){
+	    	$("body").find(".tan").remove();
+	        $("body").append('<div class="tan"><div id="msg"><div id="msg_top">提示<span class="msg_close">×</span></div><div id="msg_cont">'+e+'</div><div class="msg_close" id="msg_clear">确定</div></div> </div>');
+	        $(".msg_close").click(function (){
+	            $("#msg").remove();
+	            $(".tan").css('display','none');
+	        });	        
+	    }jQuery(window).resize(function(){
+				 resizenow();
+			});
+			function resizenow() {
+				var browserwidth = jQuery(window).width();
+				var browserheight = jQuery(window).height();
+				jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
+			};
+			resizenow();
+
+	    function alert(e){
+	    	$("body").find(".tan").remove();
+	        $("body").append('<div class="tan"><div id="msg"><div id="msg_top">提示<span class="msg_close">×</span></div><div id="msg_cont">'+e+'</div><div class="msg_close" id="msg_clear">确定</div></div> </div>');
+	        $(".msg_close").click(function (){
+	            $("#msg").remove();
+	            $(".tan").css('display','none');
+	        });	        
+	    }
