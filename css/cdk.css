@@ -193,12 +193,12 @@ ul,li{
 
 
 #bonfire-pageloader {
-	background-color:#1FB6DB;
+	background-color:#fff;
 /*	background-color:black;*/
 }
 /* loading icon color */
 #bonfire-pageloader svg {
-	fill:#fff;
+	fill:black;
 	width: 2.5rem !important;
 	height:2.5rem !important;
 }
